@@ -11,6 +11,7 @@
   <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\oAppSurf</object>
+    <object>objects\oFPSViewer</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
