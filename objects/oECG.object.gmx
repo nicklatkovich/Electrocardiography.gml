@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>
-wave_period = 1000;
-wave_size = 100;
-wave_scale = 1 / 5;
+wave_period = 200;
+wave_size = 50;
+wave_spd = 0.2;
 
 prev_time = current_time;
 wave_x = 0;
@@ -58,7 +58,7 @@ drawing_smooth = 4;
           <argument>
             <kind>1</kind>
             <string>
-wave_x += current_time - prev_time;
+wave_x += wave_spd * (current_time - prev_time);
 prev_time = current_time;
 
 if (wave_x &gt;= wave_period) {

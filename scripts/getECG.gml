@@ -12,7 +12,7 @@ if (xx < 0) {
 
 if (xx < wave_size) {
     // QRS
-    return lengthdir_y(1, wave_size / 2*pi);
+    return lengthdir_y(1, xx / wave_size * 360);
 } else {
     // no QRS
     return 0;
