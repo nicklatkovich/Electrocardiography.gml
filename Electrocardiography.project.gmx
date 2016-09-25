@@ -8,6 +8,10 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
+  <objects name="objects">
+    <object>objects\oAppSurf</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
