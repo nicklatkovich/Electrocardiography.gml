@@ -59,9 +59,14 @@ drawing_smooth = 4;
             <kind>1</kind>
             <string>
 wave_x += current_time - prev_time;
+prev_time = current_time;
 
 if (wave_x &gt;= wave_period) {
     wave_x -= wave_period;
+}
+
+if (keyboard_check_pressed(vk_escape)) {
+    game_end();
 }
 
 </string>
@@ -93,10 +98,11 @@ while (xx &lt; oAppSurf.dis_w) {
     for (var i = 0; i &lt; wave_period; i += drawing_smooth) {
         x1 = xx + i;
         x2 = x1 + drawing_smooth;
+        y1 = oAppSurf.dis_h / 2 + oAppSurf.dis_h / 4 * getECG(wave_period, wave_size, i);
+        y2 = oAppSurf.dis_h / 2 + oAppSurf.dis_h / 4 * getECG(wave_period, wave_size, i + drawing_smooth);
+        draw_line_width(x1, y1, x2, y2, 8);
     }
-    y1 = oAppSurf.dis_h / 2 + oAppSurf.dis_h / 4 * getECG(wave_period, wave_size, i);
-    y2 = oAppSurf.dis_h / 2 + oAppSurf.dis_h / 4 * getECG(wave_period, wave_size, i + drawing_smooth);
-    draw_line(x1, y1, x2, y2);
+    xx += wave_period;
 }
 
 </string>
