@@ -8,10 +8,13 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\getECG.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\oAppSurf</object>
     <object>objects\oFPSViewer</object>
+    <object>objects\oECG</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
